@@ -28,20 +28,5 @@ variable "instance_type" {
 
 variable "instance_name" {
   description = "Name to assign to the EC2 instance"
-  default     = "MyEC2Instancenew"  # Optional default value 
+  default     = "MyEC2Instance_bucket"  # Optional default value
 }
-
-resource "aws_s3_bucket" "example" {
-  bucket = var.bucket_name
-  acl    = var.bucket_acl
-
-  versioning {
-    enabled = var.bucket_versioning
-  }
-
-  tags = {
-    Name        = var.bucket_name
-    Environment = "Dev"
-  }
-}
-
