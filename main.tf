@@ -15,18 +15,17 @@ resource "aws_instance" "ubuntu" {
   }
 }
 
-# Define other variables
-variable "region" {
-  description = "AWS region"
-  default     = "us-west-1"
-}
+# Define the S3 bucket
+resource "aws_s3_bucket" "example" {
+  bucket = var.bucket_name
+  acl    = var.bucket_acl
 
-variable "instance_type" {
-  description = "Type of EC2 instance to provision"
-  default     = "t2.micro"
-}
+  versioning {
+    enabled = var.bucket_versioning
+  }
 
-variable "instance_name" {
-  description = "EC2 instance name"
-  default     = "Provisioned by Terraform"
+  tags = {
+    Name        = var.bucket_name
+    Environment = "Dev"
+  }
 }
