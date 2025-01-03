@@ -4,7 +4,7 @@
 # Define AWS region
 variable "region" {
   description = "AWS region"
-  default     = "us-west-1"
+  default     = "us-east-1"
 }
 
 # Define S3 bucket name
