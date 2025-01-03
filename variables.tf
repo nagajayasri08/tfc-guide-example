@@ -40,6 +40,6 @@ variable "instance_name" {
 # Define AMI ID for EC2 instance
 variable "ami_id" {
   description = "AMI ID for the EC2 instance"
-  default     = "ami-0657605d763ac72a8"  # Use the specified AMI ID
+  default     = "ami-0e2c8caa4b6378d8c"  # Use the specified AMI ID
 }
 
