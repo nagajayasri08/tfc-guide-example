@@ -1,13 +1,14 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
+# Provider configuration for AWS
 provider "aws" {
   region = var.region
 }
 
 # Define the EC2 instance
 resource "aws_instance" "ubuntu" {
-  ami           = "ami-0657605d763ac72a8"  # Use the specified AMI ID
+  ami           = var.ami_id  # Use a variable for the AMI ID
   instance_type = var.instance_type
 
   tags = {
