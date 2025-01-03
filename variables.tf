@@ -21,6 +21,16 @@ variable "bucket_versioning" {
   default     = true
 }
 
+variable "instance_type" {
+  description = "Type of EC2 instance to provision"
+  default     = "t2.micro"  # Optional default value
+}
+
+variable "instance_name" {
+  description = "Name to assign to the EC2 instance"
+  default     = "MyEC2Instancenew"  # Optional default value 
+}
+
 resource "aws_s3_bucket" "example" {
   bucket = var.bucket_name
   acl    = var.bucket_acl
@@ -34,3 +44,4 @@ resource "aws_s3_bucket" "example" {
     Environment = "Dev"
   }
 }
+
