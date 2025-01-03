@@ -3,7 +3,7 @@
 
 # Provider configuration for AWS
 provider "aws" {
-  region ="us-west-1"
+  region ="us-east-1"
 }
 # Define the EC2 instance
 resource "aws_instance" "ubuntu" {
