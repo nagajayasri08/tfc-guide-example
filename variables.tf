@@ -8,7 +8,7 @@ variable "region" {
 
 variable "bucket_name" {
   description = "Name of the S3 bucket"
-  default     = "my-unique-bucket-name" # Replace with a globally unique bucket name
+  default     = "my-unique-bucket-name-jayasri" # Replace with a globally unique bucket name
 }
 
 variable "bucket_acl" {
